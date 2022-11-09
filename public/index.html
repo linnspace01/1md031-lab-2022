@@ -1,70 +1,88 @@
 <!DOCTYPE HTML>
+<style>
+    @import url('https://fonts.cdnfonts.com/css/spongebob-font-condensed');
+    </style>
+
 <html lang="en">
    <head>
        <title>Borgir</title>
        <meta charset="utf-8"/>
+       <link rel="stylesheet" type="text/css" href="style.css">
+       <link href="https://fonts.cdnfonts.com/css/spongebob-font-condensed" rel="stylesheet">
    </head>
+   
    <body>
     <header> 
-        <h1>Välkommen till krångliga krabban</h1>
+        <div class="header">
+            <img src="https://i.pinimg.com/564x/fd/77/da/fd77da75332a9b8c8a6556e487bafc6d.jpg" id="headpic">
+            <h1 id="headtext">Välkommen till krångliga krabban</h1>
+            
+        </div>
     </header>
+
+
     <main>
-        <section>
-            <h1>
+        <section id="borgir" >
+            <h1 class="burtext">
                 Välj din Borgir
               </h1>
-              <div> 
+              <div class="burtext"> 
                 Här väljer du vilken borgir du e sugen på yani
               </div>
-              <div style="display: inline-block;">
-                <h2>
-                    Krabb-burgaren
-                </h2>
-                <img src="https://cdn.mos.cms.futurecdn.net/28Ltb9FTfcnKzLb5yfLsKi-320-80.jpg" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
-                <ul>
-                    <li>Innehåller bannemig ALLT</li>
-                    <li>Så Jävla god</li>
-                    <li>KÖP</li>
-                </ul>
-              </div>
 
-              
-              <div style="display: inline-block;">
-                <h2>
-                    AntiKrabb-burgaren
-                </h2>
-                <img src="https://pbs.twimg.com/media/FS0LwctXEAMCxpd.jpg" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
-                <ul>
-                    <li>Vegansk</li>
-                    <li>Glutenfri</li>
-                    <li>Laktosfri</li>
-                </ul>
-              </div>
+              <div class="wrapper">
+                <div style="display: inline-block;" class="burre box a">
+                    <h2>
 
-              <div style="display: inline-block;">
-                <h2>
-                    Mini-Krabban
-                </h2>
-                <img src="data:image/jpeg;base64,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" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
-                <ul>
-                    <li>Barnportion</li>
-                    <li>Utan senap</li>
-                    <li>Söt att kolla på</li>
-                </ul>
-              </div>
+                        Krabb-burgaren
+                    </h2>
+                    <img src="https://cdn.mos.cms.futurecdn.net/28Ltb9FTfcnKzLb5yfLsKi-320-80.jpg" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
+                    <ul class="allergier" id="al">
+                        <li>Innehåller bannemig ALLT</li>
+                        <li>Så Jävla god</li>
+                        <li>KÖP</li>
+                    </ul>
+                </div>
+    
+                <div style="display: inline-block;" class="burre box b">
+                    <h2>
+                        AntiKrabb-burgaren
+                    </h2>
+                    <img src="https://pbs.twimg.com/media/FS0LwctXEAMCxpd.jpg" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
+                    <ul class="allergier" id="al">
+                        <li>Vegansk</li>
+                        <li>Glutenfri</li>
+                        <li>Laktosfri</li>
+                    </ul>
+                </div>
+
+                <div style="display: inline-block;" class="burre box c">
+                    <h2>
+                        Mini-Krabban
+                    </h2>
+                    <img src="https://pbs.twimg.com/media/EuyEBZqXIAEQDv8?format=jpg&name=small" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
+                    <ul class="allergier" id="al">
+                        <li>Barnportion</li>
+                        <li>Utan senap</li>
+                        <li>Söt att kolla på</li>
+                    </ul>
+                </div>
+            </div>
             </section>
 
-            <section>
-              <h2>
+
+
+            <section id="contact">
+            <div class="ctext">
+                <h2>
                 Kundinfo
               </h2>  
               <div>
-                berätta nåt om dig själv fina du <br>
-                om du e snygg, ring mig
+                Berätta nåt om dig själv, fina du <br>
+                Om du e snygg, ring mig
               </div>  
-            </section>   
-            <section id="contact">
-                <form>
+          
+              <form>
                     <p>
                         <label for="name">Namn</label><br>
                         <input type="text" id="name" name="n" required="required" placeholder="Namn">
@@ -101,17 +119,21 @@
                         <input type="radio" id="man" name="gender" value="man">
                         <label for="man">Man</label><br>
                         <input type="radio" id="vea" name="gender" value="vill ej ange" checked="checked">
-                        <label for="vill ej ange">Vill ej ange</label>
+                        <label for="vill ej ange">Vill ej ange/Annat</label>
                 </form>
+            </div>
             </section> 
             <br>
-            </section>
-                <button type="submit">
+
+
+            <section id="submit">
+                <button type="submit" >
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzBZShxkwLuCWvEWCEnu8XD9-uU8XLbx-c4Q&usqp=CAU" style="width:20px;height:20px;">
                     Beställ
                 </button> 
             </section>             
-        
+ 
+            
     </main>  
     <hr>
     <footer>

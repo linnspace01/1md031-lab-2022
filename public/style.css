@@ -1,1 +1,80 @@
-/*empty*/
+
+
+body {
+    font-family: "Droid Serif", sans-serif;
+    background-color: #edcbfd;
+    margin-left: 20px;
+ }
+
+ .header {
+   height: 300px;
+   overflow:hidden;
+   /*font-family: 'SpongeBob Font Condensed', sans-serif;*/
+   font-family: 'SpongeBob Font Wide', sans-serif;
+ }
+
+ #headpic{
+   opacity:50%;
+   width: 100%;
+   height: auto;
+ }
+
+ #headtext{  
+   position:absolute; 
+   margin-top: -500px;
+   margin-left: 200px;
+}
+
+ .burre{
+    padding: 40px;
+ }
+
+ .allergier {
+    font-style: italic;
+ }
+ 
+ #borgir {
+    background-color: rgb(232, 134, 200);
+    border: 10px dotted orange;
+ }
+
+ .burtext{
+    margin-left: 20px;
+    color: #fff;
+ }
+
+ .wrapper {
+   display: grid;
+   grid-gap: 10px;
+   grid-template-columns: auto auto auto;
+   color: #fff;
+}
+
+.box {
+   color: #fff;
+   font-size: 100%;
+   grid-template-columns: auto auto auto
+}
+
+
+ #contact{
+    background-color: aquamarine;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border: 10px solid #97f9ca
+ }
+
+ .ctext{
+    margin-left: 20px;
+    margin-bottom: 20px;
+ }
+
+ button:hover {
+    color: green;
+    background-color: greenyellow;
+    cursor: pointer;
+ }
+
+ footer{
+   margin-top: 20px;
+ }
