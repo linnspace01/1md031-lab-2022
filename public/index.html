@@ -1,143 +1,17 @@
-<!DOCTYPE HTML>
-<style>
-    @import url('https://fonts.cdnfonts.com/css/spongebob-font-condensed');
-    </style>
-
-<html lang="en">
-   <head>
-       <title>Borgir</title>
-       <meta charset="utf-8"/>
-       <link rel="stylesheet" type="text/css" href="style.css">
-       <link href="https://fonts.cdnfonts.com/css/spongebob-font-condensed" rel="stylesheet">
-   </head>
-   
-   <body>
-    <header> 
-        <div class="header">
-            <img src="https://i.pinimg.com/564x/fd/77/da/fd77da75332a9b8c8a6556e487bafc6d.jpg" id="headpic">
-            <h1 id="headtext">Välkommen till krångliga krabban</h1>
-            
-        </div>
-    </header>
-
-
-    <main>
-        <section id="borgir" >
-            <h1 class="burtext">
-                Välj din Borgir
-              </h1>
-              <div class="burtext"> 
-                Här väljer du vilken borgir du e sugen på yani
-              </div>
-
-              <div class="wrapper">
-                <div style="display: inline-block;" class="burre box a">
-                    <h2>
-
-                        Krabb-burgaren
-                    </h2>
-                    <img src="https://cdn.mos.cms.futurecdn.net/28Ltb9FTfcnKzLb5yfLsKi-320-80.jpg" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
-                    <ul class="allergier" id="al">
-                        <li>Innehåller bannemig ALLT</li>
-                        <li>Så Jävla god</li>
-                        <li>KÖP</li>
-                    </ul>
-                </div>
-    
-                <div style="display: inline-block;" class="burre box b">
-                    <h2>
-                        AntiKrabb-burgaren
-                    </h2>
-                    <img src="https://pbs.twimg.com/media/FS0LwctXEAMCxpd.jpg" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
-                    <ul class="allergier" id="al">
-                        <li>Vegansk</li>
-                        <li>Glutenfri</li>
-                        <li>Laktosfri</li>
-                    </ul>
-                </div>
-
-                <div style="display: inline-block;" class="burre box c">
-                    <h2>
-                        Mini-Krabban
-                    </h2>
-                    <img src="https://pbs.twimg.com/media/EuyEBZqXIAEQDv8?format=jpg&name=small" alt="Krabby Patty" title="Another in-line element" style="width:200px;height:150px;" >
-                    <ul class="allergier" id="al">
-                        <li>Barnportion</li>
-                        <li>Utan senap</li>
-                        <li>Söt att kolla på</li>
-                    </ul>
-                </div>
-            </div>
-            </section>
-
-
-
-            <section id="contact">
-            <div class="ctext">
-                <h2>
-                Kundinfo
-              </h2>  
-              <div>
-                Berätta nåt om dig själv, fina du <br>
-                Om du e snygg, ring mig
-              </div>  
-          
-              <form>
-                    <p>
-                        <label for="name">Namn</label><br>
-                        <input type="text" id="name" name="n" required="required" placeholder="Namn">
-                    </p>
-                    <p>
-                        <label for="email">E-mail</label><br>
-                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
-                    </p>
-                    <p>
-                        <label for="adress">Adress</label><br>
-                        <input type="text" id="adress" name="ad" placeholder="Adress">
-                    </p>
-                    <p>
-                        <label for="housenumber">Husnummer</label><br>
-                        <input type="number" id="housenumber" name="nr" placeholder="Husnummer">
-                    </p>
-
-                    <p>
-                        <label for="betalningsmetod">Betalningsmetod</label><be> <br>
-                        <select id="payment" name="pay" >
-                            <option>Swish</option>
-                            <option selected="Kort">Kort</option>
-                            <option>Klarna</option>
-                            <option>Kontant</option>
-                            <option>Natura</option>
-                        </select>
-                     </p>
-
-                     <h3>
-                        Kön
-                    </h3>  
-                        <input type="radio" id="kvinna" name="gender" value="kvinna">
-                        <label for="kvinna">Kvinna</label><br>
-                        <input type="radio" id="man" name="gender" value="man">
-                        <label for="man">Man</label><br>
-                        <input type="radio" id="vea" name="gender" value="vill ej ange" checked="checked">
-                        <label for="vill ej ange">Vill ej ange/Annat</label>
-                </form>
-            </div>
-            </section> 
-            <br>
-
-
-            <section id="submit">
-                <button type="submit" >
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzBZShxkwLuCWvEWCEnu8XD9-uU8XLbx-c4Q&usqp=CAU" style="width:20px;height:20px;">
-                    Beställ
-                </button> 
-            </section>             
- 
-            
-    </main>  
-    <hr>
-    <footer>
-        &#169 2022 Copyright yeah
-    </footer>
-   </body>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>

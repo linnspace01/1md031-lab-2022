@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Krabb Burgare",
+      "lactose": true,
+      "content": "innehåller ALLT",
+      "content2": "kockens rekommendation",
+      "gluten": true,
+      "img": "https://cdn.mos.cms.futurecdn.net/28Ltb9FTfcnKzLb5yfLsKi-320-80.jpg"
+    },
+    {
+        "name": "Anti-krabb Burgare",
+        "lactose": false,
+        "gluten": false,
+        "content": "laktos- och glutenfri",
+        "content2": "vegansk",
+        "img": "https://pbs.twimg.com/media/FS0LwctXEAMCxpd.jpg"
+      },
+      {
+        "name": "Mini Krabban",
+        "lactose": true,
+        "gluten": true,
+        "content": "framför allt söt",
+        "content2": "barnstorlek",
+        "img": "https://pbs.twimg.com/media/EuyEBZqXIAEQDv8?format=jpg&name=small"
+      }
+  ]

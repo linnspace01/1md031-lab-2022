@@ -1,22 +1,49 @@
 <template>
     <div id="orders">
-      <div id="orderList">
+      <div id="orderList" >
+      <!--for each order in orders -->
         <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-          #{{ key }}: {{ order.orderItems.join(", ") }}
+            <!-- for each orderItem in order, jo jag kolla på dina bilder-->
+            <!-- en order har flera items. Du kan inte bara skriva ut listan som du gör nu. Man måste formatera det på nåt sätt.-->
+            <!-- Order list innehåller item och hur många man köpt-->
+            <!-- #29393: Kebab 2, Krabb 3, ,-->
+          <div>
+            #{{key}} : {{formatOrder(order)}}
+          </div>
+          <div style="font-style:italic ;font-family: 'Times New Roman', Times, serif;">
+            {{order.personalInfo.name}} 
+          <div style="font-size:small">
+            ({{order.personalInfo.email}}, {{order.personalInfo.pay}}, {{order.personalInfo.gender}})
+          </div>
+        </div>
         </div>
         <button v-on:click="clearQueue">Clear Queue</button>
       </div>
-      <div id="dots" v-bind:style="{ background: 'url(' + require('../../public/img/polacks.jpg')+ ')' }">
+        <div id="dots">
           <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}" v-bind:key="'dots' + key">
-            {{ key }}
-          </div>
+            {{key}}
+        </div>
       </div>
     </div>
   </template>
   <script>
   import io from 'socket.io-client'
   const socket = io();
-  
+  /*
+  "#3452": {
+    orderItems: {
+      "Krabb": 1,
+      "Kebab": 2
+    },
+    personalInfo: {
+      "name": "Linn"
+      "email": "email@linnsugerdach.gmail.om"
+    }
+
+  }
+  order.personalInfo.name
+
+  */
   export default {
     name: 'DispatcherView',
     data: function () {
@@ -31,6 +58,16 @@
     methods: {
       clearQueue: function () {
         socket.emit('clearQueue');
+      },
+      formatOrder: function (order) {
+        let str = ""
+        for (const itemName in order.orderItems) {
+          if (str != ""){
+            str += ", "
+          }
+          str += itemName + " " + order.orderItems[itemName].toString()
+        }
+        return str
       }
     }
   }
@@ -38,7 +75,7 @@
   <style>
   #orderList {
     top:1em;
-    left:1em;
+    right:1em;
     position: absolute;
     z-index: 2;
     color:black;
@@ -49,18 +86,23 @@
     position: relative;
     margin: 0;
     padding: 0;
+    background-size: cover;
     background-repeat: no-repeat;
-    width:1920px;
-    height: 1078px;
-    cursor: crosshair;
+    background: url("https://cdn.jwplayer.com/v2/media/WVSKsBQo/poster.jpg?width=720");
+    width: 700px;
+    height: 400px;
   }
   
   #dots div {
     position: absolute;
-    background: black;
-    color: white;
-    border-radius: 10px;
-    width:20px;
+    /*background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Red_x.svg/1024px-Red_x.svg.png");*/
+    color:rgb(0, 0, 0);
+    font-weight:bold;
+    background-color: rgb(242, 108, 12);
+    /*font-size: 50px;*/
+    border-radius: 50px;
+    border:4px solid rgb(245, 17, 131);
+    width:50px;
     height:20px;
     text-align: center;
   }
