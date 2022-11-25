@@ -1,12 +1,9 @@
 <template>
     <div id="orders">
       <div id="orderList" >
-      <!--for each order in orders -->
+      
         <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-            <!-- for each orderItem in order, jo jag kolla på dina bilder-->
-            <!-- en order har flera items. Du kan inte bara skriva ut listan som du gör nu. Man måste formatera det på nåt sätt.-->
-            <!-- Order list innehåller item och hur många man köpt-->
-            <!-- #29393: Kebab 2, Krabb 3, ,-->
+
           <div>
             #{{key}} : {{formatOrder(order)}}
           </div>
@@ -29,21 +26,7 @@
   <script>
   import io from 'socket.io-client'
   const socket = io();
-  /*
-  "#3452": {
-    orderItems: {
-      "Krabb": 1,
-      "Kebab": 2
-    },
-    personalInfo: {
-      "name": "Linn"
-      "email": "email@linnsugerdach.gmail.om"
-    }
 
-  }
-  order.personalInfo.name
-
-  */
   export default {
     name: 'DispatcherView',
     data: function () {

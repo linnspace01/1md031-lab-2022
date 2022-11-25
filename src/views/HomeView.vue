@@ -31,7 +31,7 @@
                 Kundinfo
               </h2>  
               <div>
-                Behöver lite info, din lilla gahba
+                Behöver lite info, tack
               </div>  
           
               <form>
@@ -189,9 +189,7 @@
         
       }
       
-      //setLocation: function(event){
-
-      //}
+     
     }
   }
 </script>
